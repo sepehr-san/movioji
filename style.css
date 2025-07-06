@@ -1,0 +1,125 @@
+/* Deep Ocean Palette */
+:root {
+  --bg-dark:    #1B3C53;  /* page background - darkest blue */
+  --bg-container: #456882; /* card/container background - mid-tone blue */
+  --accent:     #D2C1B6;  /* buttons, borders, highlights - light, warm accent */
+  --text:       #F9F3EF;  /* main text color - very light, almost white */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Vazirmatn", sans-serif;
+  direction: rtl;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--bg-container);
+  padding: 2rem;
+  border-radius: 12px;
+  /* Adjusting shadow for the new dark background */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+  margin: 1rem;
+  height: 22rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  /* Ensuring headings stand out clearly */
+  color: var(--text);
+}
+
+.emoji-display {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#guess-input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  /* Using accent for the border to highlight input */
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+}
+
+#guess-input::placeholder {
+  /* Softening placeholder text against the dark input background */
+  color: rgba(249, 243, 239, 0.6);
+}
+
+button {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  /* Adding a darker text to buttons for contrast */
+  color: var(--bg-dark);
+  font-weight: bold;
+}
+
+button:hover {
+  /* Slightly darker accent on hover for interaction feedback */
+  background: #c3b4a9;
+}
+
+.feedback {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  min-height: 1.2em;
+  opacity: 0;                    /* start hidden */
+  transition: opacity 0.5s ease; /* fade in/out */
+  color: var(--accent);
+}
+
+/* at the end of style.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--bg-container);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.modal img {
+  max-width: 200px;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.modal h2 {
+  margin-bottom: 0.5rem;
+}
