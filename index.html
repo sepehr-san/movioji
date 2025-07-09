@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -12,21 +13,35 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=Vazirmatn:wght@100..900&display=swap"
     rel="stylesheet">
 </head>
+
 <body>
+  <div class="rules">
+    <p>هر راهنمایی ۲۰ امتیاز کم می‌کنه</p>
+    <p>هر جواب غلط ۱۰ امتیاز کم می‌کنه</p>
+    <p>مراقب تایپو باش</p>
+  </div>
   <div class="container">
+
+    <!-- Score Bar Container -->
+    <div id="score-container" class="score-container">
+      <div id="score-bar" class="score-bar"></div>
+      <div id="score-text">امتیاز: <span id="score-value">۱۰۰</span></div>
+    </div>
+
+
     <h1>اسم فیلمو حدس بزن</h1>
     <div id="emoji-display" class="emoji-display"></div>
+    <div class="controls">
+      <button id="hint-button" type="button">نمایش راهنما</button>
+    </div>
+    <div id="hints-display" class="hints-display"></div>
     <form id="guess-form">
-      <input
-        type="text"
-        id="guess-input"
-        placeholder="به نظر می‌رسه..."
-        autocomplete="off"
-      />
+      <input type="text" id="guess-input" placeholder="به نظر می‌رسه..." autocomplete="off" />
       <button type="submit">پرتاب حدس</button>
     </form>
     <div id="feedback" class="feedback"></div>
   </div>
-  <script src="script2.js"></script>
+  <script src="script4.js"></script>
 </body>
+
 </html>
